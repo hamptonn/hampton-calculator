@@ -3,7 +3,7 @@ AddEventHandler('onResourceStart', function(resource)
 
     local resourcePath = LoadResourceFile(resource, 'version.txt')
     if not resourcePath or resourcePath == '' then
-        print('[Version Checker] ❌ Could not read version.txt')
+        print('^1[hampton-calculator]^0 [Version Checker] ❌ Could not read version.txt')
         return
     end
 
@@ -19,12 +19,12 @@ AddEventHandler('onResourceStart', function(resource)
         local latestVersion = text:gsub('%s+', '')
 
         if currentVersion ~= latestVersion then
-            print('[Version Checker] ⚠️ New version available!')
-            print('[Version Checker] 📌 Current: ' .. currentVersion)
-            print('[Version Checker] 🆕 Latest:  ' .. latestVersion)
-            print('[Version Checker] 🔗 Update: https://github.com/hamptonn/hampton-calculator')
+            print('^1[hampton-calculator]^0 [Version Checker] ⚠️ New version available!')
+            print('📌 Current: ' .. currentVersion)
+            print('🆕 Latest:  ' .. latestVersion)
+            print('🔗 Update: https://github.com/hamptonn/hampton-calculator')
         else
-            print('[Version Checker] ✅ You are using the latest version (' .. currentVersion .. ')')
+            print('^5[hampton-calculator]^0 [Version Checker] ✅ You are using the latest version (' .. currentVersion .. ')')
         end
     end, 'GET')
 end)
