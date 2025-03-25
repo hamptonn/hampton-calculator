@@ -8,7 +8,7 @@ AddEventHandler('onResourceStart', function(resource)
     end
 
     local currentVersion = resourcePath:gsub('%s+', '')
-    local githubURL = 'https://raw.githubusercontent.com/hamptonn/hampton-calculator/main/version.txt'
+    local githubURL = 'https://raw.githubusercontent.com/hamptonn/hampton-calculator/main/hampton-calculator/version.txt'
 
     PerformHttpRequest(githubURL, function(status, text)
         if not text or status ~= 200 then
